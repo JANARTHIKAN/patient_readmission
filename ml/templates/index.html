@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Readmission Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Patient Readmission</h1>
+        <form action="/predict" method="POST">
+            <label>Age:</label><input type="text" name="age" required><br>
+            <label>Gender:</label><input type="text" name="gender" required><br>
+            <label>Marital Status:</label><input type="text" name="marital_status" required><br>
+            <label>Medical History:</label><input type="text" name="medical_history" required><br>
+            <label>Treatment Type:</label><input type="text" name="treatment_type" required><br>
+            <label>Length of Stay:</label><input type="text" name="length_of_stay" required><br>
+            <label>Number of Visits:</label><input type="text" name="number_of_visits" required><br>
+            <label>Diagnosis:</label><input type="text" name="diagnosis" required><br>
+            <label>Discharge Condition:</label><input type="text" name="discharge_condition" required><br>
+            <label>Follow Up Appointment:</label><input type="text" name="follow_up_appointment" required><br>
+            <label>Insurance Type:</label><input type="text" name="insurance_type" required><br>
+            <label>Distance from Facility:</label><input type="text" name="distance_from_facility" required><br>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
